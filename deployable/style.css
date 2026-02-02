@@ -160,6 +160,58 @@ img {
     clip-path: ellipse(100% 100% at 100% 50%);
 }
 
+/* --- VERSION RESPONSIVE (MOBILE) --- */
+@media (max-width: 768px) {
+    .hero {
+        /* On annule le grid pour que les enfants ne soient plus limités à 50% */
+        display: block; 
+        min-height: 80vh; /* Ajustement de la hauteur sur mobile */
+        margin-top: 90px; /* Décalage augmenté pour être bien en dessous du menu */
+        padding-top: 0; /* Pas de padding supplémentaire nécessaire */
+    }
+
+    .hero-overlay {
+        position: absolute;
+        inset: 0; /* Remplit tout le conteneur .hero */
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-content {
+        position: absolute;
+        inset: 0; /* Se superpose exactement sur l'overlay */
+        width: 100%; 
+        height: 100%;
+        
+        /* Suppression de la forme elliptique pour le mobile */
+        clip-path: none; 
+        
+        /* Overlay semi-transparent (ajustez le 0.8 pour plus ou moins de transparence) */
+        background: linear-gradient(
+            rgba(230, 126, 34, 0.8) 0%, 
+            rgba(139, 69, 19, 0.9) 100%
+        );
+        
+        /* Centrage du texte pour un look mobile propre */
+        padding: 20px;
+        align-items: center; 
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Adaptation de la taille des textes pour mobile */
+    .hero-title {
+        font-size: 2.2rem !important; /* Force la réduction de taille */
+        text-align: center;
+        margin : 6%;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+
 .hero-title {
     font-size: 3.5rem; /* Reduced font size */
     margin-bottom: 1rem;
@@ -187,6 +239,8 @@ img {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    margin: 0%;
+    padding: 0 2rem;
 }
 
 /* ===========================
