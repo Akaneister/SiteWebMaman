@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADOG - Service de Dog-sitting à Brest</title>
+    <meta name="description" content="Service de dog-sitting professionnel à Brest. Promenades, garde en journée et médiation animale.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐕</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo"><img src="files/logo.png" alt="ADOG Logo" style="max-height: 70px; width: auto; padding: 0px 0px 0px 0;"></div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#lieux">Lieux</a></li>
+                <li><a href="#qualifications">Qualifications</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Journées chargées, imprévus ?</h1>
+            <p class="hero-subtitle">Votre chien mérite quand même sa promenade.<br>Pas d'inquiétude, je suis là pour lui !</p>
+            <p class="hero-availability">Du lundi au vendredi</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Contactez-moi</a>
+                <a href="tel:0601055082" class="btn btn-secondary">06 01 05 50 82</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Mes Services</h2>
+            <div class="intro-text">
+                <p>Je propose des services de pet-sitting en journée pour assurer le bien-être de votre chien en votre absence. Promenades, repas, jeux, câlins et surveillance sont assurés dans le respect de ses habitudes et de ses besoins.</p>
+                <p class="highlight">Mon objectif est que votre compagnon se sente en confiance et que vous partiez l'esprit tranquille en sachant qu'il est entre de bonnes mains.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🐕</div>
+                    <h3>Promenades</h3>
+                    <p>Sorties régulières adaptées aux besoins de votre chien dans des espaces naturels préservés.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🍖</div>
+                    <h3>Repas & Soins</h3>
+                    <p>Distribution des repas selon vos consignes et respect des habitudes alimentaires.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎾</div>
+                    <h3>Jeux & Stimulation</h3>
+                    <p>Activités ludiques et moments de jeux pour garder votre chien actif et heureux.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">❤️</div>
+                    <h3>Câlins & Attention</h3>
+                    <p>Moments de tendresse et surveillance attentive pour son bien-être émotionnel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lieux Section -->
+    <section id="lieux" class="lieux">
+        <div class="container">
+            <h2 class="section-title">Lieux de Promenade</h2>
+            <p class="section-subtitle">Des espaces naturels variés pour le bonheur de votre compagnon</p>
+            
+            <div class="lieux-grid">
+                <div class="lieu-card">
+                    <h3>🌲 Stang Alar</h3>
+                    <p>Parc urbain verdoyant idéal pour les promenades quotidiennes</p>
+                </div>
+                <div class="lieu-card">
+                    <h3>🌳 Bois de Keroual</h3>
+                    <p>Espace boisé paisible pour des balades en pleine nature</p>
+                </div>
+                <div class="lieu-card">
+                    <h3>🏞️ Plougastel-Daoulas</h3>
+                    <p>Presqu'île offrant de magnifiques sentiers et points de vue</p>
+                </div>
+                <div class="lieu-card">
+                    <h3>🌊 Côte Nord</h3>
+                    <p>Plages et sentiers côtiers pour des moments de grande liberté</p>
+                </div>
+            </div>
+
+            <div class="zone-info">
+                <p><strong>📍 Zone de prise en charge :</strong> Principalement sur la commune de Brest</p>
+                <p><strong>⏰ Horaires :</strong> Du lundi au vendredi de 8h à 18h</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conditions Section -->
+    <section id="conditions" class="conditions">
+        <div class="container">
+            <h2 class="section-title">Conditions d'Accueil</h2>
+            <p class="section-subtitle">Pour le bien-être et la sécurité de tous</p>
+            
+            <div class="conditions-grid">
+                <div class="condition-item">
+                    <span class="check-icon">✓</span>
+                    <p><strong>Identification :</strong> Puce électronique ou tatouage obligatoire</p>
+                </div>
+                <div class="condition-item">
+                    <span class="check-icon">✓</span>
+                    <p><strong>Vaccinations :</strong> Tous les vaccins à jour selon le protocole vétérinaire</p>
+                </div>
+                <div class="condition-item">
+                    <span class="check-icon">✓</span>
+                    <p><strong>Antiparasitaires :</strong> Traitement régulier contre les parasites internes et externes</p>
+                </div>
+                <div class="condition-item">
+                    <span class="check-icon">✓</span>
+                    <p><strong>Toux du chenil :</strong> Vaccination obligatoire pour les promenades collectives</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifications Section -->
+    <section id="qualifications" class="qualifications">
+        <div class="container">
+            <h2 class="section-title">Qualifications Professionnelles</h2>
+            
+            <div class="qualif-grid">
+                <div class="qualif-card">
+                    <div class="qualif-badge">🎓</div>
+                    <h3>ACACED</h3>
+                    <p class="qualif-full">Attestation de Connaissances pour les Animaux de Compagnie d'Espèces Domestiques</p>
+                    <p>Chiens, chats et NAC</p>
+                    <p class="qualif-note">Attestation obligatoire pour exercer professionnellement avec des animaux</p>
+                </div>
+                
+                <div class="qualif-card">
+                    <div class="qualif-badge">🤝</div>
+                    <h3>Médiation Animale</h3>
+                    <p>Formation spécialisée en médiation animale</p>
+                    <p class="qualif-desc">J'interviens en EHPAD avec mon chien afin de contribuer au bien-être des résidents à travers des temps d'échange, de stimulation et de lien affectif.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tarifs Section -->
+    <section id="tarifs" class="tarifs">
+        <div class="container">
+            <h2 class="section-title">Tarifs</h2>
+            
+            <div class="tarifs-grid">
+                <div class="tarif-card">
+                    <div class="tarif-duration">Demi-journée</div>
+                    <div class="tarif-price">30€</div>
+                    <p class="tarif-desc">Garde et promenade pendant une demi-journée</p>
+                </div>
+                
+                <div class="tarif-card">
+                    
+                    <div class="tarif-duration">Journée complète</div>
+                    <div class="tarif-price">60€</div>
+                    <p class="tarif-desc">Prise en charge complète de votre chien</p>
+                </div>
+                
+                <div class="tarif-card">
+                    <div class="tarif-duration">Sortie hygiène</div>
+                    <div class="tarif-price">15€</div>
+                    <p class="tarif-desc">Sortie courte de 15 minutes</p>
+                </div>
+            </div>
+
+            <div class="tarif-note">
+                <p>💡 <strong>Première visite offerte</strong> pour faire connaissance avec votre compagnon et discuter de ses besoins spécifiques.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">N'hésitez pas à me contacter pour plus d'informations et pour échanger sur les besoins de votre compagnon</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <a href="tel:0601055082">06 01 05 50 82</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:adog.mediation@gmail.com">adog.mediation@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div>
+                            <h3>Disponibilités</h3>
+                            <p>Du lundi au vendredi<br>8h - 18h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h3>Zone d'intervention</h3>
+                            <p>Brest et environs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ADOG</h3>
+                    <p>Service professionnel de dog-sitting et médiation animale à Brest</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 06 01 05 50 82</p>
+                    <p>✉️ adog.mediation@gmail.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Horaires</h4>
+                    <p>Du lundi au vendredi</p>
+                    <p>8h - 18h</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ADOG - Tous droits réservés</p>
+                <a href="files/CONDITIONS GENERALES DE VENTE.pdf" class="footer-link">CGV</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
