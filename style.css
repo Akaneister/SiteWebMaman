@@ -201,7 +201,7 @@ img {
 
     /* Adaptation de la taille des textes pour mobile */
     .hero-title {
-        font-size: 2.2rem !important; /* Force la réduction de taille */
+        font-size: 2.5rem !important; /* Force la réduction de taille */
         text-align: center;
         margin : 6%;
     }
@@ -284,7 +284,7 @@ img {
 
 
 .hero-title {
-    font-size: 3.5rem; /* Reduced font size */
+    font-size: 6rem; /* Reduced font size */
     margin-bottom: 1rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
