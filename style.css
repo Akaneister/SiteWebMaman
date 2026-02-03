@@ -261,6 +261,28 @@ img {
     }
 }
 
+
+/* Par défaut : mobile */
+.hero-title {
+    display: block;
+}
+
+.highlighted-text-shadow {
+    display: none;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .hero-title {
+        display: none;
+    }
+
+    .highlighted-text-shadow {
+        display: block;
+    }
+}
+
+
 .hero-title {
     font-size: 3.5rem; /* Reduced font size */
     margin-bottom: 1rem;
