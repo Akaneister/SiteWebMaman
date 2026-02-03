@@ -213,53 +213,52 @@ img {
 
 
 @layer demo {
-  .highlighted-text-shadow {
-    text-shadow:
-      /* regular text-shadow */
-      0 .15ch 15px var(--shadow),
-      /* text-shadow highlight */
-      0 -2px 0 var(--highlight);
-  }
+    .highlighted-text-shadow {
+        text-shadow:
+            0 .1ch 10px var(--shadow),
+            0 -1px 0 var(--highlight);
+    }
 }
 
 @layer demo.support {
-  :root {
-    --hue: 320; /* change me */
-    --bg: oklch(35% .3 var(--hue));
-    --text: oklch(85% .1 var(--hue));
-    --shadow: oklch(25% .2 var(--hue));
-    --highlight: oklch(98% .05 var(--hue));
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-  }
+    :root {
+        --hue: 320;
+        --bg: oklch(35% .3 var(--hue));
+        --text: oklch(85% .1 var(--hue));
+        --shadow: oklch(25% .2 var(--hue));
+        --highlight: oklch(98% .05 var(--hue));
+    }
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
 
-  html {
-    block-size: 100%;
-    background-color: var(--bg);
-    color: var(--text);
-  }
+    html {
+        block-size: 100%;
+        background-color: var(--bg);
+        color: var(--text);
+    }
 
-  body {
-    min-block-size: 100%;
-    font-family: system-ui, sans-serif;
-
-    display: grid;
-    place-content: center;
-    gap: 10vh;
-  }
-  
-  h1 {
-    font-size: 15vi;
-    letter-spacing: -.15ch;
-    line-height: .75;
-  }
-  
-  small {
-    max-inline-size: 30ch;
-  }
+    body {
+        min-block-size: 100%;
+        font-family: system-ui, sans-serif;
+        display: grid;
+        place-content: center;
+        gap: 3vh;
+        line-height: 1.8;
+    }
+    
+    h1 {
+        font-size: 4vi;
+        letter-spacing: -.1ch;
+        line-height: 1;
+    }
+    
+    small {
+        max-inline-size: 20ch;
+        line-height: 1.8;
+    }
 }
 
 .hero-title {
