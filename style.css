@@ -835,3 +835,78 @@ section {
         font-size: 1.6rem;
     }
 }
+
+/* ===========================
+   Popup Promotionnel Accueil
+   =========================== */
+.promo-popup {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    max-width: 320px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    border-left: 5px solid var(--primary-color);
+}
+
+.promo-popup.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.promo-content {
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: var(--text-dark);
+}
+
+.promo-icon {
+    font-size: 2.2rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.promo-text {
+    font-size: 1rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+    text-align: left;
+}
+
+.promo-text strong {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .promo-popup {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: calc(100% - 20px);
+    }
+}

@@ -313,4 +313,22 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// ===========================
+// Gestion du Popup Promotionnel
+// ===========================
+setTimeout(() => {
+    const promoPopup = document.getElementById('promo-popup');
+    const closePopupBtn = document.getElementById('close-popup');
+    
+    if (promoPopup && closePopupBtn) {
+        // Afficher le popup après 1 seconde
+        promoPopup.classList.add('show');
+        
+        // Fermer le popup
+        closePopupBtn.addEventListener('click', () => {
+            promoPopup.classList.remove('show');
+        });
+    }
+}, 1000);
+
 console.log('🐕 Site A\'Dog chargé avec succès!');

@@ -13,7 +13,7 @@
 
     <meta name="description"
         content="Service de dog-sitting professionnel à Brest et alentours. Promenades, garde en journée et médiation animale.">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <link rel="icon" type="image/png" href="files/logo.png">age d'accueil de votre site
     <!-- Open Graph -->
     <meta property="og:title" content="ADOG – Dog sitting à Brest et alentours" />
@@ -64,6 +64,18 @@
                 <a href="tel:0601055082" class="btn btn-secondary">06 01 05 50 82</a>
             </div>
         </div>
+
+        <!-- Popup Offre Découverte positionné en bas à droite de l'accueil -->
+        <div id="promo-popup" class="promo-popup">
+            <div class="promo-content">
+                <button id="close-popup" class="close-btn" aria-label="Fermer la promotion">&times;</button>
+                <div class="promo-icon">🎁</div>
+                <div class="promo-text">
+                    <strong>Offre découverte :</strong><br>
+                    Première journée à 20€
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Services Section -->
@@ -71,9 +83,18 @@
         <div class="container">
             <h2 class="section-title">Mes Services</h2>
             <div class="intro-text">
-                <p>Je propose des services de pet-sitting en journée pour assurer le bien-être de votre chien en votre
-                    absence. Promenades, repas, jeux, câlins et surveillance sont assurés dans le respect de ses
-                    habitudes et de ses besoins.</p>
+                <p>Je propose un service de pet-sitting en journée afin de veiller au bien-être de votre chien pendant
+                    votre absence.
+
+                    Parce qu’un jardin ne suffit pas toujours à répondre à ses besoins, je m’assure qu’il puisse se
+                    dépenser et rester stimulé.
+
+                    Au programme : promenades, repas, jeux, moments de tendresse et surveillance attentive, le tout dans
+                    le respect de ses habitudes et de son rythme.
+
+                    Mon objectif est d’offrir à votre compagnon un environnement rassurant et agréable pour que vous
+                    puissiez vous absenter en toute sérénité en sachant qu’il est entre de bonnes mains.
+                </p>
                 <p class="highlight">Mon objectif est que votre compagnon se sente en confiance et que vous partiez
                     l'esprit tranquille en sachant qu'il est entre de bonnes mains.</p>
             </div>
@@ -130,7 +151,7 @@
 
             <div class="zone-info">
                 <p><strong>📍 Zone de prise en charge :</strong> Principalement sur Brest et alentours</p>
-                <p><strong>⏰ Horaires :</strong> Du lundi au vendredi de 8h à 18h</p>
+                <p><strong>⏰ Horaires de prise en charge :</strong> Du lundi au vendredi de 9h à 17h</p>
             </div>
         </div>
     </section>
@@ -206,14 +227,14 @@
             <div class="tarifs-grid">
                 <div class="tarif-card">
                     <div class="tarif-duration">Demi-journée</div>
-                    <div class="tarif-price">30€</div>
+                    <div class="tarif-price">25€</div>
                     <p class="tarif-desc">Garde et promenade pendant une demi-journée</p>
                 </div>
 
                 <div class="tarif-card">
 
                     <div class="tarif-duration">Journée complète</div>
-                    <div class="tarif-price">60€</div>
+                    <div class="tarif-price">50€</div>
                     <p class="tarif-desc">Prise en charge complète de votre chien</p>
                 </div>
 
@@ -330,7 +351,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scrypt.js?v=2"></script>
 </body>
 
 </html>
