@@ -650,6 +650,74 @@ section {
 }
 
 /* ===========================
+   Médiation Section
+   =========================== */
+.mediation {
+    background: var(--white);
+}
+
+.mediation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.mediation-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.mediation-intro {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, var(--bg-light), var(--bg-cream));
+    border-left: 5px solid var(--primary-color);
+}
+
+.mediation-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+}
+
+.mediation-card p {
+    margin-bottom: 0.75rem;
+}
+
+.mediation-list {
+    padding-left: 1.2rem;
+    color: var(--text-dark);
+}
+
+.mediation-list li {
+    margin-bottom: 0.7rem;
+}
+
+.mediation-activities {
+    grid-column: 1 / -1;
+    background: var(--white);
+    border-top: 5px solid var(--primary-color);
+}
+
+.mediation-activity {
+    background: var(--bg-light);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-top: 1rem;
+}
+
+.mediation-activity h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.mediation-price {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+/* ===========================
    Contact Section
    =========================== */
 .contact-grid {
@@ -816,8 +884,14 @@ section {
     .lieux-grid,
     .conditions-grid,
     .qualif-grid,
-    .tarifs-grid {
+    .tarifs-grid,
+    .mediation-grid {
         grid-template-columns: 1fr;
+    }
+
+    .mediation-intro,
+    .mediation-activities {
+        grid-column: auto;
     }
 }
 
