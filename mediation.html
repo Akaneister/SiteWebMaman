@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Médiation Animale à Brest – ADOG</title>
+    <meta name="description" content="Médiation animale à Brest et alentours. Animation et thérapie assistées par l'animal (AAA / TAA) avec ADOG pour enfants, adultes et personnes âgées.">
+    <link rel="icon" type="image/png" href="files/logo.png">
+    <link rel="stylesheet" href="style.css?v=2">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Médiation Animale – ADOG Brest" />
+    <meta property="og:description" content="Médiation animale à Brest : accompagnement émotionnel et thérapeutique avec l'animal." />
+    <meta property="og:image" content="files/logo.png" />
+    <meta property="og:url" content="https://adogpetsitting.fr/mediation.html" />
+    <meta property="og:type" content="website" />
+
+    <style>
+        /* ── Hero spécifique médiation ── */
+        .hero-mediation {
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #8B4513 0%, #E67E22 60%, #D35400 100%);
+            padding-top: 80px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero-mediation::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('files/chien_main.png') center/cover no-repeat;
+            opacity: 0.12;
+        }
+
+        .hero-mediation-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 750px;
+            padding: 3rem 2rem;
+        }
+
+        .hero-mediation-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.4);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero-mediation h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .hero-mediation p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.95;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .hero-mediation-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── Section intro "C'est quoi ?" ── */
+        .med-intro {
+            background: var(--bg-light);
+            padding: 80px 20px;
+        }
+
+        .med-intro-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .med-intro-text h2 {
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .med-intro-text p {
+            color: var(--text-dark);
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .med-intro-illustration {
+            margin: 1.5rem 0;
+            background: white;
+            border: 1px solid rgba(139, 69, 19, 0.15);
+            border-radius: 14px;
+            padding: 0.8rem;
+            box-shadow: 0 6px 20px var(--shadow);
+        }
+
+        .med-intro-illustration img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .med-intro-illustration figcaption {
+            margin-top: 0.7rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .med-intro-text .highlight-quote {
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem 1.5rem;
+            background: var(--bg-cream);
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+        }
+
+        .med-intro-visual {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .med-stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem 1.8rem;
+            box-shadow: 0 5px 20px var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .med-stat-card:hover {
+            transform: translateX(6px);
+        }
+
+        .med-stat-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            width: 54px;
+            height: 54px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .med-stat-card h4 {
+            color: var(--secondary-color);
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .med-stat-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* ── Pourquoi ça marche / À quoi ça sert ── */
+        .med-why {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .med-why-grid {
+            max-width: 1100px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .med-why-block {
+            background: var(--bg-light);
+            border-radius: 18px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .med-why-block h3 {
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .med-why-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .med-why-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 0.9rem;
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .med-why-list li::before {
+            content: '✦';
+            color: var(--primary-color);
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        /* ── Animaux ── */
+        .med-animals {
+            background: var(--bg-light);
+            padding: 80px 20px;
+        }
+
+        .animals-grid {
+            max-width: 900px;
+            margin: 2.5rem auto 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .animal-pill {
+            background: white;
+            border: 2px solid var(--primary-color);
+            color: var(--secondary-color);
+            padding: 0.7rem 1.6rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .animal-pill:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* ── AAA / TAA ── */
+        .med-pratique {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .pratique-grid {
+            max-width: 1100px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .pratique-card {
+            border-radius: 20px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pratique-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px var(--shadow-hover);
+        }
+
+        .pratique-card.aaa {
+            background: linear-gradient(135deg, #fff8f0, #fdebd0);
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .pratique-card.taa {
+            background: linear-gradient(135deg, #f5ede8, #eeddd2);
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        .pratique-badge {
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .pratique-card.taa .pratique-badge {
+            color: var(--secondary-color);
+        }
+
+        .pratique-card h3 {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .pratique-card p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+            font-size: 0.98rem;
+        }
+
+        .pratique-tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.35rem 1rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .pratique-card.taa .pratique-tag {
+            background: var(--secondary-color);
+        }
+
+        /* ── Tarifs ── */
+        .med-tarifs {
+            background: var(--bg-light);
+            padding: 80px 20px;
+        }
+
+        .med-tarifs-grid {
+            max-width: 900px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .med-tarif-card {
+            background: white;
+            border-radius: 18px;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .med-tarif-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px var(--shadow-hover);
+        }
+
+        .med-tarif-card.featured {
+            border: 3px solid var(--primary-color);
+        }
+
+        .med-tarif-card.featured::after {
+            content: '★ Populaire';
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .med-tarif-icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .med-tarif-label {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+        }
+
+        .med-tarif-price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: 0.3rem;
+        }
+
+        .med-tarif-duration {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .med-tarif-desc {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        /* ── Parcours / À propos ── */
+        .med-about {
+            background: linear-gradient(135deg, #8B4513 0%, #E67E22 100%);
+            padding: 80px 20px;
+            color: white;
+        }
+
+        .med-about-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .med-about-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            border: 4px solid rgba(255,255,255,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+
+        .med-about-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+        }
+
+        .med-about-text p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+
+        .med-about-dog {
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin-top: 1.5rem;
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .med-about-dog span:first-child {
+            font-size: 2.5rem;
+        }
+
+        .med-about-dog p {
+            margin: 0;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .med-about-dog strong {
+            font-size: 1.05rem;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .med-about-cta {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* ── Contact rapide ── */
+        .med-contact-strip {
+            background: var(--bg-light);
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .med-contact-strip h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .med-contact-strip p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .med-contact-strip .contact-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .med-intro-inner,
+            .med-why-grid,
+            .pratique-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .med-tarifs-grid {
+                grid-template-columns: 1fr;
+                max-width: 360px;
+            }
+
+            .med-about-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .med-about-avatar {
+                margin: 0 auto;
+            }
+
+            .med-about-cta {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation (identique à l'accueil) -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="files/logo.png" alt="ADOG Logo" style="max-height: 70px; width: auto; padding: 0;">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#accueil">Accueil</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#lieux">Lieux</a></li>
+                <li><a href="index.html#qualifications">Qualifications</a></li>
+                <li><a href="index.html#tarifs">Tarifs</a></li>
+                <li><a href="mediation.html" style="color: var(--primary-color); font-weight:700;">Médiation</a></li>
+                <li><a href="index.html#contact" class="btn-nav">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menu" id="menuToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-mediation">
+        <div class="hero-mediation-content">
+        
+            <h1>Le lien entre<br>l'humain et l'animal</h1>
+            <p>Une approche douce et bienveillante pour accompagner enfants,<br>adultes et personnes âgées grâce à la présence apaisante de l'animal.</p>
+            <div class="hero-mediation-cta">
+            </div>
+        </div>
+    </section>
+
+    <!-- C'est quoi ? -->
+    <section class="med-intro">
+        <h2>C'est quoi la médiation animale ?</h2>
+                <p>
+                    C'est une méthode d'accompagnement — aussi appelée <strong>zoothérapie</strong> — qui utilise la présence d'un animal pour aider une personne à se sentir mieux sur le plan émotionnel, social ou physique.
+                </p>
+                <p>
+                    On met en relation un enfant, un adulte ou une personne âgée avec un animal spécialement choisi et encadré. Le contact avec l'animal va créer un climat de confiance, de calme et de bien-être.
+                </p>
+        <div class="med-intro-inner">
+            <div class="med-intro-text">
+                <figure class="med-intro-illustration">
+                    <img src="files/triade.png" alt="La triade en médiation animale : bénéficiaire, médiateur et animal">
+                    <figcaption>La relation entre le bénéficiaire, le médiateur et l'animal est au coeur de la médiation.</figcaption>
+                </figure>
+                
+            </div>
+            <div class="med-intro-visual">
+                <div class="med-stat-card">
+                    <div class="med-stat-icon">👶</div>
+                    <div>
+                        <h4>Enfants</h4>
+                        <p>Confiance en soi, socialisation, gestion des émotions</p>
+                    </div>
+                </div>
+                <div class="med-stat-card">
+                    <div class="med-stat-icon">🧑</div>
+                    <div>
+                        <h4>Adultes</h4>
+                        <p>Stress, anxiété, accompagnement de pathologies</p>
+                    </div>
+                </div>
+                <div class="med-stat-card">
+                    <div class="med-stat-icon">👴</div>
+                    <div>
+                        <h4>Personnes âgées</h4>
+                        <p>Stimulation, lien affectif, mémoire, lutte contre l'isolement</p>
+                    </div>
+                </div>
+                <div class="med-stat-card">
+                    <div class="med-stat-icon">🏥</div>
+                    <div>
+                        <h4>Établissements</h4>
+                        <p>EHPAD, IME, hôpitaux, structures spécialisées</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Pourquoi ça marche & à quoi ça sert -->
+    <section class="med-why">
+        <div class="container">
+            <h2 class="section-title">Les bénéfices</h2>
+            <p class="section-subtitle">Pourquoi l'animal est un médiateur si puissant ?</p>
+            <div class="med-why-grid">
+                <div class="med-why-block">
+                    <h3>💛 Pourquoi ça marche ?</h3>
+                    <ul class="med-why-list">
+                        <li>Les animaux ne jugent pas</li>
+                        <li>Ils apportent de l'affection inconditionnelle</li>
+                        <li>Ils rassurent et apaisent naturellement</li>
+                        <li>Ils facilitent la communication et la parole</li>
+                        <li>Leur présence réduit le cortisol (hormone du stress)</li>
+                    </ul>
+                </div>
+                <div class="med-why-block">
+                    <h3>🎯 À quoi ça sert ?</h3>
+                    <ul class="med-why-list">
+                        <li>Réduire le stress et l'anxiété</li>
+                        <li>Améliorer la confiance en soi</li>
+                        <li>Stimuler la mémoire et l'attention</li>
+                        <li>Favoriser les interactions sociales</li>
+                        <li>Accompagner autisme, Alzheimer, dépression et autres pathologies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animaux -->
+    <section class="med-animals">
+        <div class="container" style="text-align:center;">
+            <h2 class="section-title">Avec quels animaux ?</h2>
+            <p class="section-subtitle">Des animaux sélectionnés, formés et bienveillants</p>
+            <div class="animals-grid">
+                <span class="animal-pill">🐕 Chiens</span>
+                <span class="animal-pill">🐈 Chats</span>
+                <span class="animal-pill">🐴 Chevaux</span>
+                <span class="animal-pill">🐹 Cochons d'Inde</span>
+                <span class="animal-pill">🐦 Oiseaux</span>
+                <span class="animal-pill">🐄 Animaux de la ferme</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- AAA / TAA -->
+    <section class="med-pratique">
+        <div class="container">
+            <h2 class="section-title">Les deux formes de pratique</h2>
+            <p class="section-subtitle">Selon vos besoins et vos objectifs</p>
+            <div class="pratique-grid">
+                <div class="pratique-card aaa">
+                    <div class="pratique-badge">AAA</div>
+                    <h3>L'Animation Assistée par l'Animal</h3>
+                    <p>
+                        C'est la forme la plus <strong>simple et accessible</strong>. Elle se déroule en petit groupe de 6 à 8 personnes.
+                    </p>
+                    <p>
+                        Le but est de faire du bien et de créer du lien. On caresse l'animal, on joue avec lui, on passe un moment agréable. On cherche avant tout le <strong>bien-être immédiat</strong>.
+                    </p>
+                    <span class="pratique-tag">Bien-être & lien social</span>
+                </div>
+                <div class="pratique-card taa">
+                    <div class="pratique-badge">TAA</div>
+                    <h3>La Thérapie Assistée par l'Animal</h3>
+                    <p>
+                        C'est une forme plus <strong>encadrée et structurée</strong>, avec des objectifs thérapeutiques, éducatifs ou émotionnels précis.
+                    </p>
+                    <p>
+                        Ces objectifs sont définis au départ par le médiateur, en lien avec l'équipe médicale ou la famille. On travaille sur des <strong>progrès à long terme</strong>.
+                    </p>
+                    <span class="pratique-tag">Thérapeutique & suivi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tarifs -->
+    <section class="med-tarifs">
+        <div class="container">
+            <h2 class="section-title">Tarifs Médiation</h2>
+            <p class="section-subtitle">Des séances adaptées à vos besoins et à votre budget</p>
+            <div class="med-tarifs-grid">
+                <div class="med-tarif-card">
+                    <div class="med-tarif-icon">⏱️</div>
+                    <div class="med-tarif-label">Séance individuelle</div>
+                    <div class="med-tarif-price">25€</div>
+                    <div class="med-tarif-duration">la demi-heure</div>
+                    <div class="med-tarif-desc">Accompagnement personnel, adapté à chaque bénéficiaire</div>
+                </div>
+                <div class="med-tarif-card">
+                    <div class="med-tarif-icon">🕐</div>
+                    <div class="med-tarif-label">Séance individuelle</div>
+                    <div class="med-tarif-price">50€</div>
+                    <div class="med-tarif-duration">l'heure</div>
+                    <div class="med-tarif-desc">Session complète pour un travail approfondi</div>
+                </div>
+                <div class="med-tarif-card">
+                    <div class="med-tarif-icon">👥</div>
+                    <div class="med-tarif-label">Atelier de groupe</div>
+                    <div class="med-tarif-price">80€</div>
+                    <div class="med-tarif-duration">les 50 min (6 à 8 personnes)</div>
+                    <div class="med-tarif-desc">Animation en groupe, idéal pour les structures</div>
+                </div>
+            </div>
+            <div class="tarif-note" style="max-width:700px; margin: 2rem auto 0;">
+                <p>💡 <strong>Première séance de découverte :</strong> contactez-moi pour que nous puissions échanger sur votre projet et les besoins de vos bénéficiaires.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos / Parcours -->
+    <section class="med-about">
+        <div class="container">
+            <div class="med-about-inner">
+                <div class="med-about-avatar">🌿</div>
+                <div class="med-about-text">
+                    <h2>Mon parcours, ma vocation</h2>
+                    <p>
+                        Mon parcours face à la maladie a profondément renforcé mon désir d'accompagner les autres. La médiation animale s'est imposée à moi comme une approche naturelle pour créer du lien, apporter du réconfort et du bien-être.
+                    </p>
+                    <p>
+                        Pour cela, j'ai suivi une <strong>formation spécialisée en médiation animale en juin 2025</strong>. J'interviens notamment en EHPAD pour contribuer au bien-être des résidents à travers des temps d'échange, de stimulation et de lien affectif.
+                    </p>
+                    <div class="med-about-dog">
+                        <span>🐾</span>
+                        <p>
+                            <strong>MILO, mon partenaire Berger Australien</strong>
+                            Encore jeune, Milo commence un parcours de formation progressif à mes côtés. Il a tout à donner et tout à apprendre — tout comme nous, ensemble.
+                        </p>
+                    </div>
+                    <div class="med-about-cta">
+                        <a href="index.html#contact" class="btn btn-primary">Me contacter</a>
+                        <a href="mailto:adog.mediation@gmail.com" class="btn btn-secondary">adog.mediation@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bande contact -->
+    <section class="med-contact-strip">
+        <div class="container">
+            <h2>Un projet de médiation ?</h2>
+            <p>N'hésitez pas à me contacter pour en parler ensemble</p>
+            <div class="contact-btns">
+                <a href="tel:0601055082" class="btn btn-primary" style="background:var(--primary-color); color:white;">📞 06 01 05 50 82</a>
+                <a href="mailto:adog.mediation@gmail.com" class="btn btn-secondary" style="border-color:var(--primary-color); color:var(--primary-color);">✉️ adog.mediation@gmail.com</a>
+                <a href="index.html#contact" class="btn btn-secondary" style="border-color:var(--secondary-color); color:var(--secondary-color);">Formulaire de contact</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ADOG</h3>
+                    <p>Service professionnel de dog-sitting et médiation animale à Brest et alentours</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 06 01 05 50 82</p>
+                    <p>✉️ adog.mediation@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horaires</h4>
+                    <p>Du lundi au vendredi</p>
+                    <p>8h - 18h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ADOG – Tous droits réservés</p>
+                <a href="files/CGV.pdf" class="footer-link">CGV</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script menu mobile (identique à la page principale) -->
+    <script>
+        // Menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => navMenu.classList.remove('active'));
+            });
+        }
+
+        // Navbar scroll shadow
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                navbar.style.boxShadow = window.scrollY > 50
+                    ? '0 2px 20px rgba(139,69,19,0.2)'
+                    : '0 2px 10px rgba(139,69,19,0.1)';
+            }
+        });
+    </script>
+
+</body>
+</html>
