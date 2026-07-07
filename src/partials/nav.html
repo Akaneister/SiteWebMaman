@@ -1,0 +1,21 @@
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-[1000] bg-[rgba(255,255,255,0.98)] shadow-card transition-all duration-300">
+    <div class="container flex justify-between items-center py-3">
+        <a href="{{ homePrefix }}#accueil" aria-label="Retour à l'accueil ADOG" class="py-1">
+            <img src="assets/logo.png" alt="ADOG Logo" class="h-14 w-auto">
+        </a>
+
+        <ul class="nav-menu">
+            <li><a href="{{ homePrefix }}#accueil">Accueil</a></li>
+            <li><a href="{{ homePrefix }}#services">Services</a></li>
+            <li><a href="{{ homePrefix }}#lieux">Lieux</a></li>
+            <li><a href="{{ homePrefix }}#qualifications">Qualifications</a></li>
+            <li><a href="{{ homePrefix }}#tarifs">Tarifs</a></li>
+            <li><a href="mediation.html" class="{{ navActive === 'mediation' ? 'active-link' : '' }}">Médiation</a></li>
+            <li><a href="{{ homePrefix }}#contact" class="btn-nav">Contact</a></li>
+        </ul>
+
+        <button class="menu-toggle" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>

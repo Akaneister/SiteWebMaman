@@ -1,0 +1,26 @@
+{
+  "name": "adog-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site vitrine ADOG - dog-sitting et mediation animale a Brest",
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build:assets": "node scripts/copy-assets.mjs",
+    "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/style.css --minify",
+    "build:html": "node scripts/build-html.mjs",
+    "build": "npm run clean && npm run build:assets && npm run build:css && npm run build:html",
+    "dev": "concurrently \"tailwindcss -i ./src/styles/tailwind.css -o ./dist/style.css --watch\" \"node scripts/build-html.mjs --watch\"",
+    "optimize-images": "node scripts/optimize-images.mjs"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "html-minifier-terser": "^7.2.0",
+    "posthtml": "^0.16.6",
+    "posthtml-expressions": "^1.10.0",
+    "posthtml-include": "^2.0.1",
+    "postcss": "^8.4.49",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.15"
+  }
+}

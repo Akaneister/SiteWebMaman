@@ -1,0 +1,496 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-text-dark bg-white leading-relaxed;
+  }
+
+  img {
+    @apply max-w-full h-auto;
+  }
+}
+
+@layer components {
+  /* Layout */
+  .container {
+    @apply max-w-[1200px] mx-auto px-5;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl text-center mb-4 text-secondary font-bold;
+  }
+
+  .section-subtitle {
+    @apply text-center text-lg text-text-light mb-12 max-w-2xl mx-auto;
+  }
+
+  /* Navigation */
+  .nav-menu {
+    @apply list-none flex flex-col gap-4 fixed left-[-100%] top-20 w-full bg-white text-center py-8 shadow-[0_10px_27px_rgba(0,0,0,0.05)] transition-all duration-300 z-10;
+  }
+
+  .nav-menu.active {
+    @apply left-0;
+  }
+
+  .nav-menu a {
+    @apply no-underline text-text-dark font-medium transition-colors duration-300;
+  }
+
+  .nav-menu a:hover {
+    @apply text-primary;
+  }
+
+  .btn-nav {
+    @apply bg-primary !text-white px-6 py-2 rounded-full transition-all duration-300;
+  }
+
+  .btn-nav:hover {
+    @apply bg-accent -translate-y-0.5;
+  }
+
+  .menu-toggle {
+    @apply hidden flex-col bg-transparent border-none cursor-pointer p-2;
+  }
+
+  .menu-toggle span {
+    @apply block w-[25px] h-[3px] bg-primary my-[3px] rounded-[3px] transition-transform duration-300;
+  }
+
+  .active-link {
+    @apply !text-primary relative;
+  }
+
+  .active-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 right-0 h-0.5 bg-primary;
+  }
+
+  @media (max-width: 767px) {
+    .menu-toggle {
+      @apply flex;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .nav-menu {
+      @apply static flex-row w-auto gap-8 py-0 shadow-none left-0;
+    }
+  }
+
+  /* Hero (accueil) */
+  .hero-shell {
+    @apply relative grid grid-cols-1 md:grid-cols-2 pt-[70px];
+    min-height: calc(100vh - 70px);
+  }
+
+  .hero-overlay {
+    @apply relative z-[1] h-full bg-cover;
+    background-image: url('../assets/chien-main.jpg');
+    background-position: 120% center;
+  }
+
+  .hero-content {
+    @apply relative z-[2] flex flex-col justify-center text-white px-6 py-10;
+  }
+
+  @media (min-width: 768px) {
+    .hero-content {
+      @apply absolute top-0 right-0 h-full w-3/5;
+      padding: 12% 5% 5% 12%;
+      background: linear-gradient(90deg, #e67e22 0%, #8b4513 100%);
+      clip-path: ellipse(100% 100% at 100% 50%);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .hero-shell {
+      @apply block mt-[90px];
+      min-height: 80vh;
+    }
+
+    .hero-overlay {
+      @apply absolute inset-0 w-full h-full bg-center;
+    }
+
+    .hero-content {
+      @apply absolute inset-0 w-full h-full items-center text-center justify-center;
+      background: linear-gradient(rgba(230, 126, 34, 0.45) 0%, rgba(139, 69, 19, 0.6) 100%);
+    }
+  }
+
+  .text-shadow-soft {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-pill no-underline font-semibold transition-all duration-300 border-none cursor-pointer text-base;
+  }
+
+  .btn-primary {
+    @apply bg-white text-primary;
+  }
+
+  .btn-primary:hover {
+    @apply bg-bg-cream -translate-y-1 shadow-card-hover;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-white border-2 border-white;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-white text-primary;
+  }
+
+  .btn-full {
+    @apply w-full;
+  }
+
+  /* Cards */
+  .card-base {
+    @apply bg-white p-8 rounded-2xl shadow-card transition-all duration-300;
+  }
+
+  .service-card {
+    @apply card-base text-center;
+  }
+
+  .service-card:hover {
+    @apply -translate-y-2.5 shadow-card-hover;
+  }
+
+  .service-icon {
+    @apply flex items-center justify-center w-14 h-14 mx-auto mb-4 rounded-full bg-bg-light text-primary;
+  }
+
+  .lieu-card {
+    @apply text-white p-8 rounded-2xl transition-all duration-300;
+    background: linear-gradient(135deg, theme('colors.primary'), theme('colors.accent'));
+  }
+
+  .lieu-card:hover {
+    @apply scale-105 shadow-card-hover;
+  }
+
+  .zone-info {
+    @apply bg-bg-cream p-8 rounded-2xl text-center border-l-4 border-primary;
+  }
+
+  .condition-item {
+    @apply flex items-start gap-4 bg-white p-6 rounded-xl shadow-[0_3px_10px_rgba(139,69,19,0.1)];
+  }
+
+  .check-icon {
+    @apply flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white shrink-0;
+  }
+
+  .qualif-card {
+    @apply card-base text-center border-t-4 border-primary;
+  }
+
+  .qualif-badge {
+    @apply flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-bg-light text-primary;
+  }
+
+  .tarif-card {
+    @apply card-base text-center relative;
+  }
+
+  .tarif-card:hover {
+    @apply -translate-y-1.5 shadow-card-hover;
+  }
+
+  .tarif-card.featured {
+    @apply border-2 border-primary md:scale-105;
+  }
+
+  .tarif-badge {
+    @apply absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold;
+  }
+
+  .tarif-note {
+    @apply flex items-center gap-3 bg-bg-cream p-6 rounded-xl border-l-4 border-primary;
+  }
+
+  /* Formulaire de contact */
+  .form-input {
+    @apply w-full p-3 border-2 border-gray-200 rounded-lg font-sans text-base transition-colors duration-300;
+  }
+
+  .form-input:focus {
+    @apply outline-none border-primary;
+  }
+
+  /* Footer */
+  .footer-link {
+    @apply text-white no-underline;
+  }
+
+  .footer-link:hover {
+    @apply underline;
+  }
+
+  /* ===== Page Médiation ===== */
+  .hero-mediation {
+    @apply relative flex items-center justify-center pt-20 overflow-hidden text-center;
+    min-height: 60vh;
+    background: linear-gradient(135deg, #8b4513 0%, #e67e22 60%, #d35400 100%);
+  }
+
+  .hero-mediation::before {
+    content: '';
+    @apply absolute inset-0 bg-cover bg-center;
+    background-image: url('../assets/chien-main.jpg');
+    opacity: 0.12;
+  }
+
+  .hero-mediation-content {
+    @apply relative z-[2] text-white max-w-[750px] px-8 py-12;
+  }
+
+  .hero-mediation-badge {
+    @apply inline-block bg-white/20 border border-white/40 text-white px-5 py-1.5 rounded-full text-sm tracking-widest uppercase mb-5;
+  }
+
+  .med-intro {
+    @apply bg-bg-light py-20 px-5;
+  }
+
+  .med-intro-inner {
+    @apply max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center;
+  }
+
+  .med-intro-illustration {
+    @apply my-6 bg-white border border-primary/15 rounded-2xl p-3 shadow-card;
+  }
+
+  .med-intro-illustration img {
+    @apply block w-full h-auto rounded-lg;
+  }
+
+  .med-intro-illustration figcaption {
+    @apply mt-3 text-sm text-text-light leading-normal text-center;
+  }
+
+  .highlight-quote {
+    @apply border-l-4 border-primary px-6 py-4 bg-bg-cream rounded-r-xl italic text-secondary text-lg mt-6;
+  }
+
+  .med-intro-visual {
+    @apply flex flex-col gap-5;
+  }
+
+  .med-stat-card {
+    @apply bg-white rounded-2xl px-7 py-6 shadow-card flex items-center gap-5 transition-transform duration-300;
+  }
+
+  .med-stat-card:hover {
+    @apply translate-x-1.5;
+  }
+
+  .med-stat-icon {
+    @apply flex items-center justify-center w-14 h-14 rounded-full text-white shrink-0;
+    background: linear-gradient(135deg, theme('colors.primary'), theme('colors.accent'));
+  }
+
+  .med-why {
+    @apply bg-white py-20 px-5;
+  }
+
+  .med-why-grid {
+    @apply max-w-[1100px] mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-10;
+  }
+
+  .med-why-block {
+    @apply bg-bg-light rounded-2xl p-10 shadow-[0_4px_15px_rgba(139,69,19,0.1)];
+  }
+
+  .med-why-block h3 {
+    @apply flex items-center gap-2 text-xl text-secondary mb-6 pb-3 border-b-[3px] border-primary;
+  }
+
+  .med-why-list {
+    @apply list-none p-0;
+  }
+
+  .med-why-list li {
+    @apply flex items-start gap-3 mb-3 text-text-dark leading-relaxed;
+  }
+
+  .med-why-list li::before {
+    content: '\2013';
+    @apply text-primary shrink-0 font-bold;
+  }
+
+  .med-animals {
+    @apply bg-bg-light py-20 px-5;
+  }
+
+  .animals-grid {
+    @apply max-w-[900px] mx-auto mt-10 flex flex-wrap gap-4 justify-center;
+  }
+
+  .animal-pill {
+    @apply bg-white border-2 border-primary text-secondary px-6 py-3 rounded-pill font-semibold transition-all duration-300;
+  }
+
+  .animal-pill:hover {
+    @apply bg-primary text-white -translate-y-0.5;
+  }
+
+  .med-pratique {
+    @apply bg-white py-20 px-5;
+  }
+
+  .pratique-grid {
+    @apply max-w-[1100px] mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-10;
+  }
+
+  .pratique-card {
+    @apply rounded-2xl p-10 relative overflow-hidden shadow-card transition-all duration-300;
+  }
+
+  .pratique-card:hover {
+    @apply -translate-y-1.5 shadow-card-hover;
+  }
+
+  .pratique-card.aaa {
+    @apply border-t-4 border-primary;
+    background: linear-gradient(135deg, #fff8f0, #fdebd0);
+  }
+
+  .pratique-card.taa {
+    @apply border-t-4 border-secondary;
+    background: linear-gradient(135deg, #f5ede8, #eeddd2);
+  }
+
+  .pratique-badge {
+    @apply inline-block text-2xl font-black text-primary mb-2 tracking-tighter;
+  }
+
+  .pratique-card.taa .pratique-badge {
+    @apply text-secondary;
+  }
+
+  .pratique-tag {
+    @apply inline-block bg-primary text-white px-4 py-1.5 rounded-full text-sm font-semibold mt-2;
+  }
+
+  .pratique-card.taa .pratique-tag {
+    @apply bg-secondary;
+  }
+
+  .med-tarifs {
+    @apply bg-bg-light py-20 px-5;
+  }
+
+  .med-tarifs-grid {
+    @apply max-w-[900px] mx-auto mt-12 grid grid-cols-1 md:grid-cols-3 gap-8;
+  }
+
+  .med-tarif-card {
+    @apply bg-white rounded-2xl px-6 py-10 text-center shadow-card transition-all duration-300 relative;
+  }
+
+  .med-tarif-card:hover {
+    @apply -translate-y-1.5 shadow-card-hover;
+  }
+
+  .med-tarif-card.featured {
+    @apply border-2 border-primary;
+  }
+
+  .med-tarif-card.featured::after {
+    content: 'Populaire';
+    @apply absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap;
+  }
+
+  .med-tarif-icon {
+    @apply flex items-center justify-center w-12 h-12 mx-auto mb-3 rounded-full bg-bg-light text-primary;
+  }
+
+  .med-tarif-label {
+    @apply text-base text-text-light mb-3;
+  }
+
+  .med-tarif-price {
+    @apply text-4xl font-extrabold text-primary leading-none mb-1;
+  }
+
+  .med-tarif-duration {
+    @apply text-sm text-text-light mb-3;
+  }
+
+  .med-about {
+    @apply py-20 px-5 text-white;
+    background: linear-gradient(135deg, #8b4513 0%, #e67e22 100%);
+  }
+
+  .med-about-inner {
+    @apply max-w-[900px] mx-auto grid grid-cols-1 md:grid-cols-[auto_1fr] gap-10 items-start text-center md:text-left;
+  }
+
+  .med-about-avatar {
+    @apply w-[110px] h-[110px] rounded-full bg-white/20 border-4 border-white/50 flex items-center justify-center shrink-0 mx-auto md:mx-0;
+  }
+
+  .med-about-dog {
+    @apply bg-white/15 rounded-xl px-6 py-5 mt-6 flex items-center gap-4 text-left;
+  }
+
+  .med-about-cta {
+    @apply mt-8 flex gap-4 flex-wrap justify-center md:justify-start;
+  }
+
+  .med-contact-strip {
+    @apply bg-bg-light py-12 px-5 text-center;
+  }
+
+  .med-contact-strip h2 {
+    @apply text-2xl text-secondary mb-3;
+  }
+
+  .med-contact-strip .contact-btns {
+    @apply flex gap-4 justify-center flex-wrap;
+  }
+}
+
+@layer utilities {
+  @keyframes slideIn {
+    from {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.3s ease;
+  }
+
+  .animate-slide-out {
+    animation: slideOut 0.3s ease;
+  }
+}
