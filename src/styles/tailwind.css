@@ -220,6 +220,43 @@
     @apply flex items-center gap-3 bg-bg-cream p-6 rounded-xl border-l-4 border-primary;
   }
 
+  /* Grille tarifaire (liste de prix) */
+  .tarif-grid {
+    @apply max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8;
+  }
+
+  .tarif-panel {
+    @apply bg-white rounded-2xl shadow-card p-7 flex flex-col;
+  }
+
+  .tarif-panel-title {
+    @apply flex items-center gap-2 text-lg text-secondary font-bold mb-4 pb-3 border-b-2 border-primary/20;
+  }
+
+  .tarif-panel-icon {
+    @apply flex items-center justify-center w-8 h-8 rounded-full bg-bg-light text-primary shrink-0;
+  }
+
+  .tarif-line {
+    @apply flex items-baseline justify-between gap-3 py-3 border-b border-gray-100;
+  }
+
+  .tarif-line:last-child {
+    @apply border-b-0 pb-0;
+  }
+
+  .tarif-line-name {
+    @apply font-semibold text-text-dark;
+  }
+
+  .tarif-line-desc {
+    @apply block text-sm text-text-light font-normal mt-0.5;
+  }
+
+  .tarif-line-price {
+    @apply text-xl font-bold text-primary whitespace-nowrap shrink-0;
+  }
+
   /* Formulaire de contact */
   .form-input {
     @apply w-full p-3 border-2 border-gray-200 rounded-lg font-sans text-base transition-colors duration-300;

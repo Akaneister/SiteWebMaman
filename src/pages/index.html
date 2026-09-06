@@ -31,14 +31,20 @@
         <div class="container">
             <h2 class="section-title">Mes Services</h2>
             <div class="max-w-3xl mx-auto mb-12 text-center">
+                <p class="text-secondary text-xl font-semibold tracking-wide uppercase mb-6">Je vous propose</p>
+                <p class="text-lg mb-5">
+                    Un service de <strong>pet-sitting en journée</strong> afin de veiller au bien-être de votre
+                    chien pendant votre absence. Parce qu'un jardin ne suffit pas toujours à répondre à tous ses
+                    besoins, je m'assure que votre compagnon puisse se dépenser, se promener, jouer et rester
+                    stimulé tout au long de la journée.
+                </p>
+                <p class="text-lg mb-5">
+                    Une <strong>pension familiale</strong> dans un cadre chaleureux et rassurant, pour accueillir
+                    votre chien pendant vos déplacements ou vos vacances.
+                </p>
                 <p class="text-lg">
-                    Je propose un service de pet-sitting en journée afin de veiller au bien-être de votre chien
-                    pendant votre absence. Parce qu'un jardin ne suffit pas toujours à répondre à ses besoins, je
-                    m'assure qu'il puisse se dépenser et rester stimulé. Au programme : promenades, repas, jeux,
-                    moments de tendresse et surveillance attentive, le tout dans le respect de ses habitudes et de
-                    son rythme. Mon objectif est d'offrir à votre compagnon un environnement rassurant et agréable
-                    pour que vous puissiez vous absenter en toute sérénité en sachant qu'il est entre de bonnes
-                    mains.
+                    Je m'occupe aussi de <strong>votre maison et de vos autres animaux</strong>, chats, oiseaux,
+                    pendant votre absence.
                 </p>
             </div>
 
@@ -184,69 +190,101 @@
     <section id="tarifs" class="bg-bg-light py-20 px-5">
         <div class="container">
             <h2 class="section-title">Tarifs</h2>
+            <p class="section-subtitle">Des formules claires, adaptées à chaque besoin</p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-                <div class="tarif-card">
-                    <div class="text-lg text-text-light mb-4">Demi-journée</div>
-                    <div class="text-5xl font-bold text-primary mb-4">25€</div>
-                    <p class="text-text-light">Garde et promenade pendant une demi-journée</p>
+            <div class="tarif-grid">
+                <div id="journee" class="tarif-panel">
+                    <h3 class="tarif-panel-title">
+                        <span class="tarif-panel-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        </span>
+                        Garde en journée
+                    </h3>
+                    <div class="tarif-line">
+                        <span class="tarif-line-name">Demi-journée
+                            <span class="tarif-line-desc">Garde et promenade</span>
+                        </span>
+                        <span class="tarif-line-price">25 €</span>
+                    </div>
+                    <div class="tarif-line">
+                        <span class="tarif-line-name">Journée complète
+                            <span class="tarif-line-desc">Prise en charge complète</span>
+                        </span>
+                        <span class="tarif-line-price">50 €</span>
+                    </div>
+                    <div class="tarif-line">
+                        <span class="tarif-line-name">Sortie hygiène
+                            <span class="tarif-line-desc">Sortie courte de 15 minutes</span>
+                        </span>
+                        <span class="tarif-line-price">15 €</span>
+                    </div>
                 </div>
 
-                <div class="tarif-card">
-                    <div class="text-lg text-text-light mb-4">Journée complète</div>
-                    <div class="text-5xl font-bold text-primary mb-4">50€</div>
-                    <p class="text-text-light">Prise en charge complète de votre chien</p>
+                <div id="pension" class="tarif-panel">
+                    <h3 class="tarif-panel-title">
+                        <span class="tarif-panel-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        </span>
+                        Pension
+                    </h3>
+                    <div class="tarif-line">
+                        <span class="tarif-line-name">1 à 3 jours</span>
+                        <span class="tarif-line-price">30 €/j</span>
+                    </div>
+                    <div class="tarif-line">
+                        <span class="tarif-line-name">3 à 7 jours</span>
+                        <span class="tarif-line-price">25 €/j</span>
+                    </div>
+                    <div class="tarif-line">
+                        <span class="tarif-line-name">7 jours et +</span>
+                        <span class="tarif-line-price">20 €/j</span>
+                    </div>
                 </div>
 
-                <div class="tarif-card">
-                    <div class="text-lg text-text-light mb-4">Sortie hygiène</div>
-                    <div class="text-5xl font-bold text-primary mb-4">15€</div>
-                    <p class="text-text-light">Sortie courte de 15 minutes</p>
+                <div id="visite-domicile" class="tarif-panel">
+                    <h3 class="tarif-panel-title">
+                        <span class="tarif-panel-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M9 22V12h6v10"></path><path d="M2 10.6L12 2l10 8.6"></path><path d="M4 10v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10"></path></svg>
+                        </span>
+                        Visite à domicile
+                    </h3>
+                    <div class="tarif-line">
+                        <span class="tarif-line-name">Visite courte
+                            <span class="tarif-line-desc">Nourriture, eau, litière</span>
+                        </span>
+                        <span class="tarif-line-price">12 €</span>
+                    </div>
+                    <div class="tarif-line">
+                        <span class="tarif-line-name">Visite complète
+                            <span class="tarif-line-desc">Un petit moment passé avec le chat</span>
+                        </span>
+                        <span class="tarif-line-price">20 €</span>
+                    </div>
+                    <div class="tarif-line">
+                        <span class="tarif-line-name">Visite étendue
+                            <span class="tarif-line-desc">Médicaments, plantes, courrier, etc.</span>
+                        </span>
+                        <span class="tarif-line-price">25 €</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="tarif-note">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 shrink-0 text-primary"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                <p><strong>Première visite offerte</strong> pour faire connaissance avec votre compagnon et discuter
-                    de ses besoins spécifiques.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tarif Pension Section -->
-    <section id="pension" class="py-20 px-5">
-        <div class="container">
-            <h2 class="section-title">Pension</h2>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="tarif-card">
-                    <div class="text-lg text-text-light mb-4">Forfait Week-end</div>
-                    <div class="text-5xl font-bold text-primary mb-4">60€</div>
-                    <p class="text-text-light">Garde du <strong>vendredi 18h</strong> jusqu'au <strong>dimanche
-                            19h</strong></p>
+            <div class="max-w-[1000px] mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="tarif-note">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 shrink-0 text-primary"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    <p><strong>Première visite offerte</strong> pour faire connaissance avec votre compagnon et
+                        discuter de ses besoins.</p>
                 </div>
-
-                <div class="tarif-card">
-                    <div class="text-lg text-text-light mb-4">1 à 3 jours</div>
-                    <div class="text-5xl font-bold text-primary mb-4">30€/J</div>
-                </div>
-
-                <div class="tarif-card">
-                    <div class="text-lg text-text-light mb-4">3 à 7 jours</div>
-                    <div class="text-5xl font-bold text-primary mb-4">22€/J</div>
-                </div>
-
-                <div class="tarif-card">
-                    <div class="text-lg text-text-light mb-4">7 jours +</div>
-                    <div class="text-5xl font-bold text-primary mb-4">20€/J</div>
-                    <p class="text-text-light">20% sur la facture totale</p>
+                <div class="tarif-note">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 shrink-0 text-primary"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <p>Des <strong>frais de déplacement</strong> s'appliquent pour un domicile en dehors de Brest.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-bg-light py-20 px-5">
+    <section id="contact" class="py-20 px-5">
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <p class="section-subtitle">N'hésitez pas à me contacter pour plus d'informations et pour échanger sur
