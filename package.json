@@ -10,7 +10,8 @@
     "build:html": "node scripts/build-html.mjs",
     "build": "npm run clean && npm run build:assets && npm run build:css && npm run build:html",
     "dev": "concurrently \"tailwindcss -i ./src/styles/tailwind.css -o ./dist/style.css --watch\" \"node scripts/build-html.mjs --watch\"",
-    "optimize-images": "node scripts/optimize-images.mjs"
+    "fetch-reviews": "node scripts/fetch-reviews.mjs",
+    "optimize-images":"node scripts/optimize-images.mjs"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",

@@ -80,7 +80,7 @@
 
   @media (min-width: 768px) {
     .nav-menu {
-      @apply static flex-row w-auto gap-8 py-0 shadow-none left-0;
+      @apply static flex-row w-auto gap-4 lg:gap-7 py-0 shadow-none left-0 text-sm lg:text-base;
     }
   }
 
@@ -257,6 +257,43 @@
     @apply text-xl font-bold text-primary whitespace-nowrap shrink-0;
   }
 
+  /* Avis Google */
+  .avis-summary {
+    @apply flex flex-wrap items-center justify-center gap-3 mb-10;
+  }
+
+  .avis-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+
+  .avis-card {
+    @apply card-base flex flex-col border-t-4 border-primary;
+  }
+
+  .avis-avatar {
+    @apply flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold shrink-0;
+  }
+
+  .avis-stars {
+    @apply text-[#FBBC04] tracking-wider;
+  }
+
+  .avis-stars-empty {
+    @apply text-gray-300;
+  }
+
+  .avis-text {
+    @apply text-text-dark leading-relaxed;
+  }
+
+  .btn-avis {
+    @apply bg-primary text-white;
+  }
+
+  .btn-avis:hover {
+    @apply bg-accent -translate-y-1 shadow-card-hover;
+  }
+
   /* Formulaire de contact */
   .form-input {
     @apply w-full p-3 border-2 border-gray-200 rounded-lg font-sans text-base transition-colors duration-300;
@@ -273,6 +310,14 @@
 
   .footer-link:hover {
     @apply underline;
+  }
+
+  .social-link {
+    @apply flex items-center justify-center w-10 h-10 rounded-full bg-white/15 text-white transition-all duration-300;
+  }
+
+  .social-link:hover {
+    @apply bg-white text-secondary -translate-y-0.5;
   }
 
   /* ===== Page Médiation ===== */
@@ -497,6 +542,56 @@
 
   .med-contact-strip .contact-btns {
     @apply flex gap-4 justify-center flex-wrap;
+  }
+
+  /* ===== Page Prévention morsures ===== */
+  .atelier-programme {
+    @apply max-w-[800px] mx-auto list-none p-0 flex flex-col gap-4;
+  }
+
+  .atelier-programme li {
+    @apply flex items-center gap-5 bg-bg-light rounded-2xl px-6 py-5 text-lg text-text-dark shadow-[0_4px_15px_rgba(139,69,19,0.08)] transition-transform duration-300;
+  }
+
+  .atelier-programme li:hover {
+    @apply translate-x-1.5;
+  }
+
+  .atelier-step {
+    @apply flex items-center justify-center w-11 h-11 rounded-full text-white font-bold text-lg shrink-0;
+    background: linear-gradient(135deg, theme('colors.primary'), theme('colors.accent'));
+  }
+
+  .atelier-table-wrap {
+    @apply max-w-[800px] mx-auto overflow-x-auto rounded-2xl shadow-card;
+  }
+
+  .atelier-table {
+    @apply w-full bg-white text-center border-collapse;
+  }
+
+  .atelier-table th {
+    @apply bg-secondary text-white font-semibold px-4 py-4;
+  }
+
+  .atelier-table td {
+    @apply px-4 py-4 border-b border-gray-100 text-text-dark;
+  }
+
+  .atelier-table tbody tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .atelier-table tbody tr:hover {
+    @apply bg-bg-cream;
+  }
+
+  .atelier-table td:first-child {
+    @apply font-semibold text-secondary;
+  }
+
+  .atelier-price {
+    @apply !text-primary text-xl font-bold;
   }
 }
 

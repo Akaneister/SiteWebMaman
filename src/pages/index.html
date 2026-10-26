@@ -283,8 +283,59 @@
         </div>
     </section>
 
+    <!-- Avis Section -->
+    <section id="avis" class="py-20 px-5">
+        <div class="container">
+            <h2 class="section-title">Avis Clients</h2>
+            <p class="section-subtitle">Ce que les propriétaires pensent de mes services</p>
+
+            <if condition="googleReviews.rating">
+                <div class="avis-summary">
+                    <svg viewBox="0 0 48 48" class="w-8 h-8 shrink-0" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"></path><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"></path><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"></path><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"></path></svg>
+                    <span class="text-3xl font-bold text-secondary">{{ googleReviews.rating }}</span>
+                    <span class="avis-stars text-xl" aria-label="Note de {{ googleReviews.rating }} sur 5">{{ googleReviews.ratingStars }}<span class="avis-stars-empty">{{ googleReviews.ratingEmptyStars }}</span></span>
+                    <span class="text-text-light">({{ googleReviews.count }} avis Google)</span>
+                </div>
+            </if>
+
+            <if condition="googleReviews.reviews.length">
+                <div class="avis-grid">
+                    <each loop="review in googleReviews.reviews">
+                        <article class="avis-card">
+                            <div class="flex items-center gap-3 mb-3">
+                                <if condition="review.photo">
+                                    <img src="{{ review.photo }}" alt="" class="w-10 h-10 rounded-full object-cover" loading="lazy" referrerpolicy="no-referrer">
+                                </if>
+                                <else>
+                                    <span class="avis-avatar">{{ review.initial }}</span>
+                                </else>
+                                <div>
+                                    <p class="font-semibold text-secondary leading-tight">{{ review.author }}</p>
+                                    <p class="text-sm text-text-light">{{ review.date }}</p>
+                                </div>
+                            </div>
+                            <p class="avis-stars mb-2" aria-label="Note de {{ review.rating }} sur 5">{{ review.stars }}<span class="avis-stars-empty">{{ review.emptyStars }}</span></p>
+                            <p class="avis-text">{{ review.text }}</p>
+                        </article>
+                    </each>
+                </div>
+            </if>
+            <else>
+                <p class="text-center text-lg mb-8">Vous m'avez confié votre compagnon ? Soyez parmi les premiers à
+                    partager votre expérience !</p>
+            </else>
+
+            <div class="flex justify-center mt-10">
+                <a href="{{ googleReviews.writeUrl }}" target="_blank" rel="noopener" class="btn btn-avis">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    Laisser un avis sur Google
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-5">
+    <section id="contact" class="bg-bg-light py-20 px-5">
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <p class="section-subtitle">N'hésitez pas à me contacter pour plus d'informations et pour échanger sur
@@ -329,6 +380,19 @@
                         <div>
                             <h3 class="text-secondary font-semibold mb-1">Zone d'intervention</h3>
                             <p>Brest et alentours</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-5 items-start">
+                        <div class="flex items-center justify-center w-11 h-11 rounded-full bg-white text-primary shadow-card shrink-0">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-secondary font-semibold mb-1">Suivez-nous</h3>
+                            <p class="flex flex-col gap-1">
+                                <a href="https://www.instagram.com/adog.mediation/" target="_blank" rel="noopener" class="text-primary font-semibold hover:underline">Instagram : @adog.mediation</a>
+                                <a href="https://www.facebook.com/p/Adog-pet-sitting-61589345139394/" target="_blank" rel="noopener" class="text-primary font-semibold hover:underline">Facebook : Adog pet sitting</a>
+                            </p>
                         </div>
                     </div>
                 </div>
